@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { Button } from '../components/button';
-import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '../components/card'; // Example card component
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import { Button } from '@/components/button';
+import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/card';
 
 const Home: React.FC = () => {
     return (
