@@ -1,28 +1,40 @@
 import React from 'react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { Button } from '@/components/button';
-import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/card';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
+import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
+import { Badge } from '@/components/ui/badge';
 
 const Home: React.FC = () => {
     return (
-        <div className="min-h-screen flex flex-col">
-            <Header />
+        <div className="min-h-screen flex flex-col items-center justify-center">
             <main className="flex-grow container mx-auto px-4 py-8">
-                <Card className="mx-auto max-w-lg">
-                    <CardHeader>
-                        <CardTitle>Welcome to My Profile</CardTitle>
-                        <CardDescription>This is the home page.</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                        <p>
-                            Explore the features of this site, and feel free to check out the available options below!
-                        </p>
-                        <Button className="mt-4">Get Started</Button>
-                    </CardContent>
-                </Card>
+                <h1 className="text-3xl font-bold text-center mb-4">Welcome to the Home Page</h1>
+
+                <div className="mb-4">
+                    <Badge variant="secondary">New Feature!</Badge>
+                </div>
+
+                <Alert variant="info">
+                    <AlertTitle>Announcement</AlertTitle>
+                    <AlertDescription>
+                        This is a new feature we just added! Check it out below.
+                    </AlertDescription>
+                </Alert>
+
+                <Accordion type="single" collapsible>
+                    <AccordionItem value="item-1">
+                        <AccordionTrigger>What is this website?</AccordionTrigger>
+                        <AccordionContent>
+                            This website is a portfolio showcasing my projects and skills.
+                        </AccordionContent>
+                    </AccordionItem>
+                    <AccordionItem value="item-2">
+                        <AccordionTrigger>What can you find here?</AccordionTrigger>
+                        <AccordionContent>
+                            You can explore my projects, learn more about my background, and contact me.
+                        </AccordionContent>
+                    </AccordionItem>
+                </Accordion>
             </main>
-            <Footer />
         </div>
     );
 }
