@@ -17,8 +17,8 @@ describe('App', () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText('Header')).toBeInTheDocument();
-    expect(screen.getByText('Footer')).toBeInTheDocument();
+    expect(screen.getByText('Header')).toBeTruthy();
+    expect(screen.getByText('Footer')).toBeTruthy();
   });
 
   test('renders Home page on default route', () => {
@@ -28,7 +28,7 @@ describe('App', () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText('Home Page')).toBeInTheDocument();
+    expect(screen.getByText('Home Page')).toBeTruthy();
   });
 
   test('renders About page when navigating to /about', () => {
@@ -38,7 +38,7 @@ describe('App', () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText('About Page')).toBeInTheDocument();
+    expect(screen.getByText('About Page')).toBeTruthy();
   });
 
   test('renders Projects page when navigating to /projects', () => {
@@ -48,6 +48,6 @@ describe('App', () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText('Projects Page')).toBeInTheDocument();
+    expect(screen.getByText('Projects Page')).toBeTruthy();
   });
 });
