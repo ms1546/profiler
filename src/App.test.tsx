@@ -3,7 +3,7 @@ import { MemoryRouter } from 'react-router-dom';
 import App from './App';
 import { jest } from '@jest/globals';
 
-jest.mock('@/pages/Home', () => () => <div>Home Page</div>);
+jest.mock('@/pages/Home.tsx', () => () => <div>Home Page</div>);
 jest.mock('@/pages/About', () => () => <div>About Page</div>);
 jest.mock('@/pages/Projects', () => () => <div>Projects Page</div>);
 jest.mock('@/components/Header', () => () => <header>Header</header>);
