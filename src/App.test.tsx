@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import App from './App';
-import { jest } from '@jest/globals';
 
 jest.mock('@/pages/Home.tsx', () => () => <div>Home Page</div>);
 jest.mock('@/pages/About', () => () => <div>About Page</div>);
